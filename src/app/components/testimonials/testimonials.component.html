@@ -1,0 +1,87 @@
+<div class="testimonials-testimonials">
+  <div class="testimonials-logo-container">
+    <img
+      [attr.alt]="Logo_alt"
+      [attr.src]="Logo_src"
+      class="testimonials-logo"
+    />
+  </div>
+  <div class="testimonials-content">
+    <div id="quotes" class="testimonials-quotes">
+      <div class="quote active-quote">
+        <app-quote
+          title="Manager @KLE Tech"
+          Author="John Doe"
+          Avatar="/assets/vector6113-r6dl.svg"
+          rootClassName="quote-root-class-name"
+        ></app-quote>
+      </div>
+      <div class="quote">
+        <app-quote
+          Quote='"Testing these templates is a pleasure."'
+          title="Developer @ Vista La Vista"
+          Author="Author 2"
+          rootClassName="quote-root-class-name"
+        ></app-quote>
+      </div>
+      <div class="quote">
+        <app-quote
+          Quote='"Wow, awesome works!'
+          title="Designer @ OhBoy"
+          rootClassName="quote-root-class-name"
+        ></app-quote>
+      </div>
+    </div>
+    <div class="testimonials-buttons">
+      <div id="quote-before" class="testimonials-left">
+        <svg viewBox="0 0 1024 1024" class="testimonials-icon">
+          <path
+            d="M854 470v84h-520l238 240-60 60-342-342 342-342 60 60-238 240h520z"
+          ></path>
+        </svg>
+      </div>
+      <div id="quote-next" class="testimonials-right">
+        <svg viewBox="0 0 1024 1024" class="testimonials-icon2">
+          <path
+            d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <div class="testimonials-container1">
+        <dangerous-html
+          html=" <script>
+    /* Quote Slider - Code Embed */
+
+    let current = 1;
+
+    const nextButton = document.querySelector('#quote-next');
+    const previousButton = document.querySelector('#quote-before');
+    const quotes = document.querySelectorAll('.quote');
+
+    if (nextButton && previousButton && quotes) {
+      nextButton.addEventListener('click', () => {
+        quotes.forEach((quote) => {
+          quote.classList.remove('active-quote');
+        });
+
+        current == quotes.length ? (current = 1) : current++;
+        quotes[current - 1].classList.add('active-quote');
+      });
+
+      previousButton.addEventListener('click', () => {
+        quotes.forEach((quote) => {
+          quote.classList.remove('active-quote');
+        });
+
+        current == 1 ? (current = quotes.length) : current--;
+        quotes[current - 1].classList.add('active-quote');
+      });
+    }
+  </script>"
+        ></dangerous-html>
+      </div>
+    </div>
+  </div>
+</div>
