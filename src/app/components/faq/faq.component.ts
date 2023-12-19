@@ -32,9 +32,9 @@ export class FAQ {
   @Input()
   Description3: string =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
-  rawif60: string = ' '
-  rawcm7o: string = ' '
-  rawvami: string = ' '
-  rawgikd: string = ' '
+  rawccoz: string = ' '
+  rawawgq: string = ' '
+  raw2qi7: string = ' '
+  rawkmkl: string = ' '
   constructor() {}
 }
